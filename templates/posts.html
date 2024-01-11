@@ -4,86 +4,47 @@
 <title>{% block title %}La Pelu - Posts {% endblock title %}</title>
 
 {% block contenido %}
-<!-- Our  Glasses section -->
-<div class="banner_main">
-   <div class="glasses">
-       <div class="container">
-          <div class="row">
-             <div class="col-md-10 offset-md-1">
-                <div class="titlepage ">
-                   <h2>Our Glasses</h2>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor
-                      e et dolore magna aliqua. Ut enim ad minim veniam, qui
-                   </p>
+
+   {% for i in posts %}
+      
+      <br>
+      <li>{{ i.titulo }}</li>
+      <li>{{ i.subtitulo }}</li>
+      <li>{{ i.categoria }}</li>
+
+   {% empty %}
+      <h1>No hay registros</h1>
+
+   {% endfor %}
+
+   <br>
+   <h1>AHORA ESTAMOS EN OTRO HTML</h1>
+   <h1>donde estamos poniendo otro contenido</h1>
+
+   <!-- Sección de Nuestros Lentes -->
+   <div class="banner_main">
+      <div class="glasses">
+          <div class="container">
+             <div class="row">
+                <div class="col-md-10 offset-md-1">
+                   <div class="titlepage">
+                      <h2>Nuestros Lentes</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qui
+                      </p>
+                   </div>
                 </div>
              </div>
           </div>
-       </div>
-       <div class="container-fluid py-4">
-          <div class="row">
-             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="glasses_box">
-                   <figure><img src="{% static 'images/glass1.png' %}" alt="#"/></figure>
-                   <h3><span class="blu">$</span>50</h3>
-                   <p>Sunglasses</p>
+          <div class="container-fluid py-4">
+             <div class="row">
+                <!-- ... (tu código existente de glasses_box) ... -->
+                <div class="col-md-12">
+                   <a class="read_more" href="#">Leer Más</a>
                 </div>
-             </div>
-             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="glasses_box">
-                   <figure><img src="{% static 'images/glass2.png' %}" alt="#"/></figure>
-                   <h3><span class="blu">$</span>50</h3>
-                   <p>Sunglasses</p>
-                </div>
-             </div>
-             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="glasses_box">
-                   <figure><img src="{% static 'images/glass3.png' %}" alt="#"/></figure>
-                   <h3><span class="blu">$</span>50</h3>
-                   <p>Sunglasses</p>
-                </div>
-             </div>
-             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="glasses_box">
-                   <figure><img src="{% static 'images/glass4.png' %}" alt="#"/></figure>
-                   <h3><span class="blu">$</span>50</h3>
-                   <p>Sunglasses</p>
-                </div>
-             </div>
-             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="glasses_box">
-                   <figure><img src="{% static 'images/glass5.png' %}" alt="#"/></figure>
-                   <h3><span class="blu">$</span>50</h3>
-                   <p>Sunglasses</p>
-                </div>
-             </div>
-             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="glasses_box">
-                   <figure><img src="{% static 'images/glass6.png' %}" alt="#"/></figure>
-                   <h3><span class="blu">$</span>50</h3>
-                   <p>Sunglasses</p>
-                </div>
-             </div>
-             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="glasses_box">
-                   <figure><img src="{% static 'images/glass7.png' %}" alt="#"/></figure>
-                   <h3><span class="blu">$</span>50</h3>
-                   <p>Sunglasses</p>
-                </div>
-             </div>
-             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="glasses_box">
-                   <figure><img src="{% static 'images/glass8.png' %}" alt="#"/></figure>
-                   <h3><span class="blu">$</span>50</h3>
-                   <p>Sunglasses</p>
-                </div>
-             </div>
-             <div class="col-md-12">
-                <a class="read_more" href="#">Read More</a>
-             </div>
-          </div>
-       </div>
-    </div>
+            </div>
+         </div>
+      </div>
    </div>
- <!-- end Our  Glasses section -->
+ <!-- Fin de la sección de Nuestros Lentes -->
 
 {% endblock %}
