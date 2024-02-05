@@ -4,30 +4,30 @@
 <title>{% block title %}La Pelu - Posts {% endblock title %}</title>
 
 {% block contenido %}
-
-   {% for i in posts %}
-      
-      <br>
-      <li>{{ i.titulo }}</li>
-      <li>{{ i.subtitulo }}</li>
-      <li>{{ i.categoria }}</li>
-
-   {% empty %}
-      <h1>No hay registros</h1>
-
-   {% endfor %}
-
-   <br>
-   <h1>AHORA ESTAMOS EN OTRO HTML</h1>
-   <h1>donde estamos poniendo otro contenido</h1>
-
-   <!-- Sección de Nuestros Lentes -->
+<!-- Sección de Nuestros Lentes -->
    <div class="banner_main">
+      <h1>Probando seccion</h1>
       <div class="glasses">
           <div class="container">
              <div class="row">
                 <div class="col-md-10 offset-md-1">
-                   <div class="titlepage">
+
+                  {% for i in Posts %}
+      
+                     <br>
+                     <li>{{ i.titulo }}</li>
+                     <li>{{ i.subtitulo }}</li>
+                     <li>{{ i.categoria }}</li>
+
+                     {% empty %}
+                        <h1>No hay registros</h1>
+                  
+                  {% endfor %}
+                  
+                  <br>
+                  <h1>AHORA ESTAMOS EN OTRO HTML</h1>
+                  <h1>donde estamos poniendo otro contenido</h1>
+                  <div class="titlepage">
                       <h2>Nuestros Lentes</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qui
                       </p>
